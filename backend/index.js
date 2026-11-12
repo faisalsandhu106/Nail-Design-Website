@@ -55,7 +55,7 @@ app.post('/send-email', async (req, res) => {
                   </h2>
         
                   <p style="margin: 8px 0 0; color: #888888; font-size: 14px;">
-                    Nail Design Ljiljana Medović
+                    Nail Design
                   </p>
                 </div>
         
