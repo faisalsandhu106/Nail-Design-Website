@@ -1,4 +1,4 @@
-# Nail Design — Ljiljana Medović
+# Nail Design 
 
 A responsive salon website for manicure, permanent makeup, and beauty training. Built with React and Vite, with an Express/Nodemailer API for contact-form messages.
 
