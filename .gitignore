@@ -1,18 +1,14 @@
-// .gitignore for Nail Design Website
-# Ignore node_modules
-node_modules/
-# Ignore build output
-dist/
-# Ignore environment files
+# Environment variables and secrets
 .env
 .env.*
+!.env.example
 
-# Ignore log files
-*.log
-# Ignore temporary files
-*.tmp
-# Ignore coverage reports
-coverage/
-# Ignore system files
-.DS_Store
+# Dependencies
+node_modules/
 
+# Build files
+dist/
+build/
+
+# Vercel
+.vercel/
