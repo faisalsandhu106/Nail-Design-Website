@@ -64,3 +64,24 @@ p {
   line-height: 160%;
 }
 
+
+
+/* Responsive and accessibility polish */
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+body { min-width: 320px; overflow-x: hidden; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+a, button, input, textarea { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid #b76e86; outline-offset: 3px; }
+button:disabled { cursor: not-allowed; opacity: .65; }
+::selection { color: #252525; background: #f7dce5; }
+@media (max-width: 640px) { main { padding-top: 82px; } .btn { min-height: 48px; padding: .8rem 1.15rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+
+
+/* Refined editorial details */
+:root { color-scheme: light; }
+.faq-section { background: linear-gradient(180deg, #fffaf9 0%, #fcfcfc 100%); }
+.faq-item button { min-height: 4rem; }
+.faq-item button:focus-visible { border-radius: .35rem; }
+.wrapper { width: 100%; }
+@media (hover: hover) { .btn { transition: transform .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease; } .btn:hover { transform: translateY(-2px); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }

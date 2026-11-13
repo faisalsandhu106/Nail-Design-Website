@@ -37,7 +37,7 @@ app.post('/send-email', async (req, res) => {
           from: process.env.EMAIL_USER,
           to: process.env.EMAIL_USER,
           replyTo: email,
-          subject: `New Contact Message from ${name}`,
+          subject: `NailDesign Contact Message from ${name}`,
           html: `
             <div style="margin: 0; padding: 40px 20px; background-color: #f7f5f3; font-family: Arial, Helvetica, sans-serif; color: #333333;">
               <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);">

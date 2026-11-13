@@ -41,16 +41,19 @@ import phoneIcon from "./assets/phone-icon.svg";
 
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
 
+// Navigation links data
 export const navLinks = [
   { name: "Home", url: "/" },
   { name: "Services", url: "/services" },
   { name: "About Us", url: "/about-us" },
+  { name: "FAQs", url: "/faqs" },
   { name: "Contact", url: "/contact" },
 ];
 
+// Services data
 export const services = [
   {
-    pageUrl: "#",
+    pageUrl: "manicure",
     servicesTitle: "Manicure",
     servicesDesc:
       "Precise and gentle nail care that includes shaping according to your preference, filing to achieve a perfectly smooth finish, detailed cuticle care for a healthy and well-groomed appearance, and the application of high-quality polish in your chosen color. We use the best techniques and products to ensure your nails look flawless and last as long as possible. Beyond the aesthetic benefits, a manicure also helps maintain the health of your nails and the skin of your hands, providing a feeling of freshness and luxury.",
@@ -85,7 +88,7 @@ export const services = [
     ],
   },
   {
-    pageUrl: "#",
+    pageUrl: "permanent-makeup",
     servicesTitle: "Permanent Makeup",
     servicesDesc:
       "Our permanent makeup service includes the precise application of pigment to define the eyebrows, eyelids, and lips, giving you a flawless look at all times without the need for daily makeup application. We use high-quality pigments and advanced techniques to achieve a natural and elegant appearance that lasts for months. With our permanent makeup, you can wake up ready for the day every morning, feeling confident and effortlessly beautiful.",
@@ -120,7 +123,7 @@ export const services = [
     ],
   },
   {
-    pageUrl: "#",
+    pageUrl: "training-education",
     servicesTitle: "Training & Education",
     servicesDesc:
       "Enhance your skills and knowledge with our professionally designed training programs, suitable for both beginners and experienced beauty professionals. Our courses cover the latest techniques and trends in the beauty industry, from manicure and pedicure to massage and facial care, as well as advanced permanent makeup courses and many other treatments. Our training programs are designed to provide practical knowledge and hands-on experience through interactive workshops led by experienced instructors with years of expertise. With us, you will gain not only theoretical knowledge but also practical skills that will help you build a successful career in the beauty industry.",
@@ -151,6 +154,7 @@ export const services = [
   }
 ];
 
+// Contact form email template
 export const counter = [
   {
     counterNumber: "1000",
@@ -172,12 +176,13 @@ export const counter = [
   },
 ];
 
+// FAQs data
 export const aboutSection = [
   {
     aboutImg: aboutImg1,
     aboutTItle: "Our Story",
     aboutDesc:
-      "It all began more than 25 years ago, when Ljiljana Medović, inspired by her passion for beauty and her desire to create unique experiences for her clients, opened her first salon. Ever since, we have worked every day to provide each client with an experience that leaves them feeling pampered and satisfied. Over the years, we have become synonymous with quality and professionalism. Our salon is recognized for its special focus on nail care and beauty, including professional nail services, as well as training programs for nail designers and competitors. Through continuous improvement and by keeping up with the latest trends in the beauty industry, we strive to provide services that meet the highest standards.",
+      "It all began more than 25 years ago, inspired by her passion for beauty and her desire to create unique experiences for her clients, opened her first salon. Ever since, we have worked every day to provide each client with an experience that leaves them feeling pampered and satisfied. Over the years, we have become synonymous with quality and professionalism. Our salon is recognized for its special focus on nail care and beauty, including professional nail services, as well as training programs for nail designers and competitors. Through continuous improvement and by keeping up with the latest trends in the beauty industry, we strive to provide services that meet the highest standards.",
     altImg:
       "Ljiljana Medović demonstrating her style and professionalism in a posed photo.",
   },
@@ -191,6 +196,7 @@ export const aboutSection = [
   },
 ];
 
+// Contact information and social links data
 export const contactInfo = [
   {
     type: "Phone",
@@ -215,6 +221,7 @@ export const contactInfo = [
   },
 ];
 
+// Social links data
 export const socialLinks = [
   {
     url: "#",

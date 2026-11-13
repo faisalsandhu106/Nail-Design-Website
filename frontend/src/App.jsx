@@ -9,6 +9,7 @@ import ServicesPageDetails from "./pages/ServicesPageDetails";
 import { AnimatePresence } from 'framer-motion';
 import PageAnimation from "./components/PageAnimations";
 import PageNotFound from "./pages/PageNotFound";
+import FAQPage from "./pages/FAQPage";
 
 function App() {
 
@@ -23,8 +24,9 @@ function App() {
           <Route path="/services" element={<PageAnimation><ServicesPage /></PageAnimation>} />
           <Route path="/about-us" element={<PageAnimation><AboutPage /></PageAnimation>} />
           <Route path="/contact" element={<PageAnimation><ContactPage /></PageAnimation>} />
+          <Route path="/faqs" element={<PageAnimation><FAQPage /></PageAnimation>} />
           <Route path="/services/:title" element={<PageAnimation><ServicesPageDetails /></PageAnimation>} />
-          <Route path="/*" element={<PageAnimation><PageNotFound /></PageAnimation>} />
+          <Route path="*" element={<PageAnimation><PageNotFound /></PageAnimation>} />
         </Routes>
       </AnimatePresence>
       <Footer />

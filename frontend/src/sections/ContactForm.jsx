@@ -12,7 +12,7 @@ const ContactForm = () => {
 
     //* Contact-Us API 
     //* ==============
-    const API = "https://naildesign-website-backend.vercel.app/send-email";
+    const API = `https://naildesign-website-backend.vercel.app/send-email`;
 
 
     //* React Hook Form
@@ -73,13 +73,13 @@ const ContactForm = () => {
                                     placeholder='John'
                                     id='name'
                                     {...register("name", {
-                                        required: 'name is required'
+                                        required: "Please enter your name", minLength: { value: 2, message: "Name must be at least 2 characters" }, maxLength: { value: 80, message: "Name must be 80 characters or fewer" }
                                     })}
                                     className='py-2 mt-1 w-full border-b bg-transparent focus-visible:outline-none focus:border-darkColor' />
                                 {errors.name && <span className='text-[0.9em] text-red-500'>{errors.name?.message}</span>}
                             </div>
                             <div>
-                                <label htmlFor="number" className="font-medium">
+                                <label htmlFor="phone" className="font-medium">
                                     Phone *
                                 </label>
                                 <input
@@ -87,7 +87,7 @@ const ContactForm = () => {
                                     placeholder='+923XX XXXXXXX'
                                     id='phone'
                                     {...register("phone", {
-                                        required: 'number is required'
+                                        required: "Please enter your phone number", minLength: { value: 6, message: "Please enter a valid phone number" }, maxLength: { value: 30, message: "Phone number is too long" }
                                     })}
                                     className='py-2 mt-1 w-full border-b bg-transparent focus-visible:outline-none focus:border-darkColor' />
                                 {errors.phone && <span className='text-[0.9em] text-red-500'>{errors.phone?.message}</span>}
@@ -98,11 +98,12 @@ const ContactForm = () => {
                                 Email *
                             </label>
                             <input
-                                type="text"
+                                type="email"
+                                autoComplete="email"
                                 placeholder='john@example.com'
                                 id='email'
                                 {...register("email", {
-                                    required: 'email is required',
+                                    required: "Please enter your email address", maxLength: { value: 254, message: "Email address is too long" },
                                     pattern: {
                                         value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
                                         message: 'invalid email address'
@@ -119,7 +120,7 @@ const ContactForm = () => {
                                 placeholder='Write your message here...'
                                 id='message'
                                 {...register("message", {
-                                    required: 'message is required'
+                                    required: "Please enter a message", minLength: { value: 10, message: "Message must be at least 10 characters" }, maxLength: { value: 3000, message: "Message must be 3000 characters or fewer" }
                                 })}
                                 className='py-2 mt-1 w-full min-h-[180px] border-b bg-transparent focus-visible:outline-none focus:border-darkColor' />
                             {errors.message && <span className='text-[0.9em] text-red-500'>{errors.message?.message}</span>}
@@ -129,6 +130,8 @@ const ContactForm = () => {
                         <AnimatePresence>
                             {submitted && (
                                 <motion.p
+                                    role="status"
+                                    aria-live="polite"
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     exit={{ opacity: 0, scale: 0.95 }}
@@ -143,6 +146,8 @@ const ContactForm = () => {
                         <AnimatePresence>
                             {isError && (
                                 <motion.p
+                                    role="alert"
+                                    aria-live="assertive"
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     exit={{ opacity: 0, scale: 0.95 }}
@@ -180,7 +185,7 @@ const ContactForm = () => {
                     </div>
                 </form>
                 <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d366131.2602827887!2d72.68694040773146!3d31.390087543818893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39225cb554ba6e9d%3A0xb5ce63a0243ae08b!2sFaisalabad%20City%2C%20Pakistan!5e1!3m2!1sen!2s!4v1786355645495!5m2!1sen!2s" width="100%" height="450" loading="lazy"></iframe>
+                    <iframe title="Map showing Faisalabad, Pakistan" src="https://www.google.com/maps?q=Faisalabad%2C%20Pakistan&output=embed" width="100%" height="450" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="border-0 min-h-[320px] sm:min-h-[450px]"></iframe>
                 </div>
             </section>
         </>

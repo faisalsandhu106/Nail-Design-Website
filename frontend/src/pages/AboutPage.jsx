@@ -2,6 +2,7 @@ import BreadCrumb from "../components/BreadCrumb"
 import { aboutSection } from "../data"
 import Cta from "../sections/Cta"
 import { Helmet, HelmetProvider } from "react-helmet-async"
+import ScrollReveal from "../components/ScrollReveal"
 
 export default function AboutPage() {
   return (
@@ -10,7 +11,7 @@ export default function AboutPage() {
         <title>Nail Design | About Us</title>
         <meta
           name="description"
-          content="Learn more about us and our dedication to nail care and beauty."
+          content="Meet the people, passion and professional standards behind Nail Design. Discover our story, our approach to individual care and our commitment to continually developing our craft."
         />
         <meta
           property="og:title"
@@ -18,11 +19,11 @@ export default function AboutPage() {
         />
         <meta
           property="og:description"
-          content="Learn more about us and our dedication to nail care and beauty."
+          content="Meet the people, passion and professional standards behind Nail Design. Discover our story, our approach to individual care and our commitment to continually developing our craft."
         />
         <meta
           property="og:url"
-          content="https://naildesign-ljiljanamedovic.com/o-nama"
+          content="https://naildesign-online.vercel.app/about-us"
         />
       </Helmet>
       <main>
@@ -31,7 +32,7 @@ export default function AboutPage() {
           <div className="wrapper my-[50px] lg:my-[100px]">
             <div>
               {aboutSection.map((section, index) => (
-                <div
+                <ScrollReveal
                   key={index}
                   className="flex flex-col sm:flex-row sm:even:flex-row-reverse items-center gap-8 lg:gap-20 mb-[50px] lg:mb-[100px]"
                 >
@@ -42,7 +43,7 @@ export default function AboutPage() {
                     <h2 className="mb-6">{section.aboutTItle}</h2>
                     <p>{section.aboutDesc}</p>
                   </div>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
           </div>

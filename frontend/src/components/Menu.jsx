@@ -79,7 +79,7 @@ export default function Menu({ open, setOpen }) {
                     <motion.li key={index} variants={navLinkVariants} className="group relative">
                         <Link to={navLink.url} onClick={() => setOpen(false)}>{navLink.name}</Link>
                         {(location.pathname === navLink.url || 
-                  (navLink.url === '/usluge' && location.pathname.startsWith('/usluge'))) && (
+                  (navLink.url === '/services' && location.pathname.startsWith('/services'))) && (
                   <div className="absolute -bottom-1 bg-black h-[1px] w-5"></div>
                 )}
                     </motion.li>

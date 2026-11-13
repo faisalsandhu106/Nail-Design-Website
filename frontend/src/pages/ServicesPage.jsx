@@ -2,6 +2,8 @@ import Services from "../sections/Services";
 import BreadCrumb from "../components/BreadCrumb";
 import Cta from "../sections/Cta";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import FAQSection from "../components/FAQSection";
+import ScrollReveal from "../components/ScrollReveal";
 
 export default function ServicesPage() {
 
@@ -11,7 +13,7 @@ export default function ServicesPage() {
         <title>Nail Design | Services</title>
         <meta
           name="description"
-          content="Explore a wide range of professional services at our salon, including manicures, permanent makeup, and much more."
+          content="Explore tailored manicure services, permanent makeup and practical beauty education. Find the right service for your style and goals, then contact us to discuss your appointment."
         />
         <meta
           property="og:title"
@@ -19,16 +21,17 @@ export default function ServicesPage() {
         />
         <meta
           property="og:description"
-          content="Explore a wide range of professional services at our salon, including manicures, permanent makeup, and much more."
+          content="Explore tailored manicure services, permanent makeup and practical beauty education. Find the right service for your style and goals, then contact us to discuss your appointment."
         />
         <meta
           property="og:url"
-          content="https://naildesign-ljiljanamedovic.com/usluge"
+          content="https://naildesign-online.vercel.app/services"
         />
       </Helmet>
       <main>
         <BreadCrumb page="Services" />
-        <Services />
+        <ScrollReveal><Services /></ScrollReveal>
+        <FAQSection compact />
       </main>
       <Cta />
     </HelmetProvider>

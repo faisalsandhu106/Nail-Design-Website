@@ -18,18 +18,17 @@ export default function Gallery({ servicesGallery }) {
       <div className="wrapper">
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
           {servicesGallery.map((item, index) => (
-            <div
-              className="overflow-hidden aspect-square cursor-pointer group"
-              key={index}
+            <button
+              type="button"
+              className="overflow-hidden aspect-square cursor-zoom-in group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink-500"
+              key={item}
               onClick={() => handleImageClick(index)}
+              aria-label={`Open gallery image ${index + 1}`}
             >
-              <img
-                loading="lazy"
-                src={item}
-                alt=""
-                className="group-hover:scale-125 duration-500"
-              />
-            </div>
+              <img loading="lazy" decoding="async" src={item}
+                alt={`Nail Design portfolio example ${index + 1}`}
+                className="group-hover:scale-105 transition-transform duration-500" />
+            </button>
           ))}
         </div>
       </div>

@@ -5,6 +5,7 @@ import BreadCrumb from "../components/BreadCrumb";
 import { services } from '../data';
 import Cta from "../sections/Cta";
 import { HelmetProvider, Helmet } from 'react-helmet-async';
+import ScrollReveal from '../components/ScrollReveal';
 
 export default function ServicesPageDetails() {
 
@@ -17,31 +18,31 @@ export default function ServicesPageDetails() {
   return (
     <HelmetProvider>
       <Helmet>
-        <title>Nail Design | Services</title>
+        <title>{`${service.servicesTitle} | Nail Design`}</title>
         <meta
           name="description"
-          content="Explore a wide range of professional services at our salon, including manicures, permanent makeup, and much more."
+          content={service.servicesDesc}
         />
         <meta
           property="og:title"
-          content="Nail Design Ljiljana Medović | Services"
+          content={`${service.servicesTitle} | Nail Design Ljiljana Medović`}
         />
         <meta
           property="og:description"
-          content="Explore a wide range of professional services at our salon, including manicures, permanent makeup, and much more."
+          content={service.servicesDesc}
         />
         <meta
           property="og:url"
-          content="https://naildesign-ljiljanamedovic.com/usluge"
+          content={`https://naildesign-online.vercel.app/services/${service.pageUrl}`}
         />
       </Helmet>
       <main>
-        <BreadCrumb page="Usluge" />
-        <section className='my-[50px] lg:my-[100px]'>
+        <BreadCrumb page={service.servicesTitle} />
+        <ScrollReveal as="section" className='my-[50px] lg:my-[100px]'>
           <div className="wrapper">
             <div className='flex flex-col items-center gap-8 sm:flex-row lg:gap-16'>
               <div className='h-[400px] lg:h-[500px] w-full sm:w-1/2'>
-                <img src={service.servicesImg} alt="" />
+                <img src={service.servicesImg} alt={`${service.servicesTitle} at Nail Design`} loading="eager" />
               </div>
               <div className='sm:w-1/2'>
                 <h2 className="mb-8">{service.servicesTitle}</h2>
@@ -49,9 +50,10 @@ export default function ServicesPageDetails() {
               </div>
             </div>
           </div>
-        </section>
-        <Accordion servicesList={service.servicesList} />
-        <Gallery servicesGallery={service.servicesGallery} />
+        </ScrollReveal>
+        <ScrollReveal><Accordion servicesList={service.servicesList} />
+        </ScrollReveal>
+        <ScrollReveal><Gallery servicesGallery={service.servicesGallery} /></ScrollReveal>
       </main>
       <Cta />
     </HelmetProvider>

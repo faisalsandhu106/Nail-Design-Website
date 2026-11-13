@@ -4,6 +4,8 @@ import Intro from "../sections/Intro";
 import Services from "../sections/Services";
 import Cta from "../sections/Cta";
 import Counter from "../sections/Benefits";
+import FAQSection from "../components/FAQSection";
+import ScrollReveal from "../components/ScrollReveal";
 
 export default function HomePage() {
   return (
@@ -12,7 +14,7 @@ export default function HomePage() {
         <title>Nail Design | Home</title>
         <meta
           name="description"
-          content="Welcome to our little corner of beauty and elegance in the heart of Niš. Treat yourself to exceptional care at our salon, where your beauty is our priority."
+          content="Discover thoughtful nail care, refined beauty treatments and professional training in a welcoming salon where every detail is considered."
         />
         <meta
           property="og:title"
@@ -20,18 +22,19 @@ export default function HomePage() {
         />
         <meta
           property="og:description"
-          content="Welcome to our little corner of beauty and elegance in the heart of Niš. Treat yourself to exceptional care at our salon, where your beauty is our priority."
+          content="Discover thoughtful nail care, refined beauty treatments and professional training in a welcoming salon where every detail is considered."
         />
         <meta
           property="og:url"
-          content="https://naildesign-ljiljanamedovic.com/pocetna"
+          content="https://naildesign-online.vercel.app/"
         />
       </Helmet>
       <main>
-        <Hero />
-        <Intro />
-        <Counter />
+        <ScrollReveal><Hero /></ScrollReveal>
+        <ScrollReveal><Intro /></ScrollReveal>
+        <ScrollReveal><Counter /></ScrollReveal>
         <Services />
+        <FAQSection compact />
       </main>
       <Cta />
     </HelmetProvider>

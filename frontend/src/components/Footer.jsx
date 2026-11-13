@@ -77,7 +77,7 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     className="capitalize hover:underline"
-                    to={`/${service.pageUrl}`}
+                    to={`/services/${service.pageUrl}`}
                     aria-label={`Pogledajte ${service.servicesTitle}`}>
                     {service.servicesTitle}
                   </Link>
@@ -108,6 +108,30 @@ export default function Footer() {
         <div className="flex flex-col-reverse items-center justify-between gap-5 border-t border-pink-100 py-8 sm:flex-row">
           <p className="text-center text-sm font-medium text-slate-500 sm:text-left">
             &copy; {currentYear} Nail Design — All About Beauty. All Rights Reserved.
+          </p>
+
+          {/* <p>
+            Developed By
+            <Link
+              className="ml-1 font-medium text-pink-500 hover:underline"
+              to="https://www.linkedin.com/in/nikola-milosevic-dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Nikola Milosevic's LinkedIn profile">
+              Faisal Nazir
+            </Link>
+          </p> */}
+
+          <p className="text-center text-sm font-medium text-slate-500 sm:text-left">
+            Developed By
+            <Link
+              className="ml-1 text-pink-500 hover:underline"
+              to="https://faisal-nazir-portfolio.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Faisal Nazir's Portfolio">
+              Faisal Nazir
+            </Link>
           </p>
 
           <button

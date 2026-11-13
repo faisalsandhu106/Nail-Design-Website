@@ -11,10 +11,10 @@ export default function Hero() {
         </div>
         <div className="flex flex-col items-start gap-6 sm:w-1/2">
           <h1>
-            Perfect nails are a part of your beauty
+            Beauty begins with the details
           </h1>
           <p className="text-xl">
-            We’re here to give your nails a flawless shine
+            Thoughtful nail care, refined beauty treatments and education — delivered with care, creativity and attention to every detail.
           </p>
           <Link to="/about-us" className="btn btn-outline">
             <span>Learn More</span>

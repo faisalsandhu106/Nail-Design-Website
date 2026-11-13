@@ -45,7 +45,7 @@ export default function Navbar() {
                 <div key={index} className="group relative capitalize">
                   <Link to={navLink.url} aria-current={location.pathname === navLink.url ? 'page' : undefined}>{navLink.name}</Link>
                   {(location.pathname === navLink.url ||
-                    (navLink.url === '/usluge' && location.pathname.startsWith('/usluge'))) && (
+                    (navLink.url === '/services' && location.pathname.startsWith('/services'))) && (
                       <div className="absolute -bottom-1 bg-black h-[1px] w-5"></div>
                     )}
                   <div className="absolute -bottom-1 bg-black h-[1px] w-0 group-hover:w-5 transition-all duration-300"></div>
